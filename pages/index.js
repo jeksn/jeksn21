@@ -12,7 +12,9 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>jeksn</h1>
 
-        <p className={styles.description}>johan@jeksn.me</p>
+        <span className={styles.info}>developer | WTMG Create</span>
+
+        <p className={styles.email}>johan@jeksn.me</p>
       </main>
 
       <footer className={styles.footer}>
