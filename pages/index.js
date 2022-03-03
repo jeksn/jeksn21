@@ -33,8 +33,8 @@ export default function Home({ posts }) {
        </Head>
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">
-         <div className="relative top-0 flex flex-col w-full min-h-screen text-gray-200 bg-neutral-800 gradient md:w-1/2 ">
-          <div className="container bottom-0 flex flex-col justify-end h-full p-16 md:fixed">
+         <div className="relative top-0 flex flex-col w-full h-[80vh] text-gray-200 md:min-h-screen bg-neutral-800 gradient md:w-1/2 ">
+          <div className="container bottom-0 flex flex-col justify-end h-full px-4 pt-16 pb-4 md:px-16 md:fixed">
             <h1 className="text-3xl font-bold">jeksn</h1>
             <div className="pl-3 my-6 border-l-2 border-white">
               <p className="text-sm leading-relaxed text-gray-200">
