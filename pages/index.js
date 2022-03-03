@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>jeksn</h1>
+        <h1 className={styles.title}>jeksn / Johan Eriksson</h1>
 
         <span className={styles.info}>developer | WTMG Create</span>
 
