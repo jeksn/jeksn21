@@ -33,19 +33,36 @@ export default function Home({ posts }) {
        </Head>
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">
-         <div className="relative top-0 flex flex-col w-full min-h-screen text-white bg-neutral-900 md:w-1/2">
+         <div className="relative top-0 flex flex-col w-full min-h-screen text-gray-200 bg-neutral-800 gradient md:w-1/2 ">
           <div className="container fixed bottom-0 flex flex-col justify-end h-full p-16">
-            <h1 className="text-3xl font-bold">jeksn / Johan Eriksson</h1>
-            <span className="mt-4 text-lg">developer | WTMG Create</span>
-            <Link href="mailto:johan@jeksn.me">
-              <a className="mt-4 text-2xl hover:underline">johan@jeksn.me</a>
-            </Link>
+            <h1 className="text-3xl font-bold">jeksn</h1>
+            <div className="pl-3 my-6 border-l-2 border-white">
+              <p className="text-sm leading-relaxed text-gray-200">
+                Welcome to my corner of the internet. <br></br>I work as a developer at WTMG Create in Stockholm, Sweden. <br></br>
+                Here I'll put stuff that I find interesting and hopefully you will too.
+              </p>
+            </div>
+            <p className="mb-2 text-lg ">You can find me here:</p>
+            <a href="https://twitter.com/jeksn_" className="text-base hover:underline" target="_blank">Twitter</a>
+            <a href="https://twitter.com/jeksn_" className="mb-2 text-sm italic" target="_blank">@jeksn_</a>
+            <a href="https://www.linkedin.com/in/jeksn/" className="text-base hover:underline" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jeksn/" className="mb-2 text-sm italic" target="_blank">@jeksn</a>
+            <a href="https://letterboxd.com/jeksn/" className="text-base hover:underline" target="_blank">Letterboxd</a>
+            <a href="https://letterboxd.com/jeksn/" className="mb-2 text-sm italic" target="_blank">@jeksn</a>
+            <a href="https://oku.club/user/jek5n" className="text-base hover:underline" target="_blank">Oku</a>
+            <a href="https://oku.club/user/jek5n" className="mb-2 text-sm italic" target="_blank">@jek5n</a>
+            <a href="mailto:johan@jeksn.me" className="text-base hover:underline">E-mail me</a>
+            <a href="mailto:johan@jeksn.me" className="mb-2 text-sm italic">johan@jeksn.me</a>
+            <span className="pt-8 text-xs text-gray-400">v0.1. This site is still actively worked on and might look wonky at times.</span>
           </div>
          </div>
           <div className="relative w-full h-full text-black bg-gray-50 md:w-1/2">
           <div className="container flex flex-col justify-end h-full p-16">
-            <h2 className="text-lg font-semibold">Blog posts</h2>
-            {posts.map(({ slug, frontmatter }) => (
+            <h2 className="text-2xl font-semibold">Blog</h2>
+            {posts.sort(
+              (a, b) =>
+                new Date(b.frontmatter.publishedDate).getTime() - new Date(a.frontmatter.publishedDate).getTime(),
+            ).map(({ slug, frontmatter }) => (
               <div
                 key={slug}
                 className='text-black'
@@ -55,7 +72,7 @@ export default function Home({ posts }) {
                     <p className='pt-4 mb-0 text-lg underline'>{frontmatter.title}</p>
                   </a>
                 </Link>
-                <span className='text-base'>{frontmatter.date}</span>
+                <span className='text-sm text-neutral-700'>{frontmatter.publishedDate}</span>
               </div>
             ))}
           </div>
