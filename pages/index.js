@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts }) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-white text-neutral-800">
+    <div className="flex flex-col items-center justify-center h-auto bg-white md:h-screen text-neutral-800">
        <Head>
          <title>Johan Eriksson - jeksn.me</title>
          <link rel="icon" href="/favicon.ico" />
@@ -34,7 +34,7 @@ export default function Home({ posts }) {
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">
          <div className="relative top-0 flex flex-col w-full min-h-screen text-gray-200 bg-neutral-800 gradient md:w-1/2 ">
-          <div className="container fixed bottom-0 flex flex-col justify-end h-full p-16">
+          <div className="container bottom-0 flex flex-col justify-end h-full p-16 md:fixed">
             <h1 className="text-3xl font-bold">jeksn</h1>
             <div className="pl-3 my-6 border-l-2 border-white">
               <p className="text-sm leading-relaxed text-gray-200">
