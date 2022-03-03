@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Tailwind Classes */
+h1 {
+  @apply text-3xl;
+}
+ul {
+  @apply list-disc;
+  @apply list-inside;
+}
