@@ -11,8 +11,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className="text-5xl font-bold">jeksn / Johan Eriksson</h1>
-        <span className="mt-4 text-xl">developer | WTMG Create</span>
+        <h1 className="text-6xl font-bold">jeksn / Johan Eriksson</h1>
+        <span className="mt-4 text-lg">developer | WTMG Create</span>
         <Link href="mailto:johan@jeksn.me">
           <a className="mt-4 text-2xl hover:underline">johan@jeksn.me</a>
         </Link>
