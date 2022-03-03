@@ -1,16 +1,21 @@
 import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-
+import Link from 'next/link'
 function PostTemplate({ content, data }) {
    // This holds the data between `---` from the .md file
    const frontmatter = data
  
    return (
-     <div className="max-w-screen-xl mx-auto prose">
+     <>
+     <Link href="/">
+      <a className="absolute top-10 left-10 text-neutral-900">go back</a>
+     </Link>
+     <div className="container flex flex-col justify-center h-full max-w-screen-md mx-auto mt-32 prose">
        <h1>{frontmatter.title}</h1>
        <ReactMarkdown children={content} />
      </div>
+     </>
    )
  }
 
