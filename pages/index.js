@@ -3,6 +3,7 @@ import Head from "next/head";
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Script from 'next/script'
 
 export async function getStaticProps() {
   const files = fs.readdirSync('content');
@@ -30,6 +31,7 @@ export default function Home({ posts }) {
        <Head>
          <title>Johan Eriksson - jeksn.me</title>
          <link rel="icon" href="/favicon.ico" />
+         <Script src="https://umami-mu-nine.vercel.app/umami.js" />
        </Head>
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">
@@ -37,7 +39,7 @@ export default function Home({ posts }) {
           <div className="container bottom-0 flex flex-col justify-end h-full px-4 pt-16 pb-4 md:px-16 md:fixed">
             <h1 className="text-3xl font-bold">jeksn</h1>
             <div className="pl-3 my-6 border-l-2 border-white">
-              <p className="text-sm leading-relaxed text-gray-200">
+              <p className="text-sm leading-relaxed text-[#e5e5e5]">
                 Welcome to my corner of the internet. <br></br>I work as a developer at WTMG Create in Stockholm, Sweden. <br></br>
                 Here I'll put stuff that I find interesting and hopefully you will too.
               </p>
@@ -53,16 +55,16 @@ export default function Home({ posts }) {
             <a href="https://oku.club/user/jek5n" className="mb-2 text-sm italic" target="_blank">@jek5n</a>
             <a href="mailto:johan@jeksn.me" className="text-base hover:underline">E-mail me</a>
             <a href="mailto:johan@jeksn.me" className="mb-2 text-sm italic">johan@jeksn.me</a>
-            <span className="pt-8 text-xs text-gray-400">v0.1. This site is still actively worked on and might look wonky at times.</span>
+            <span className="pt-8 text-xs text-gray-400">2022. This site is still actively worked on and might look wonky at times.</span>
           </div>
          </div>
-          <div className="relative w-full h-full text-black bg-gray-50 md:w-1/2">
+          <div className="relative w-full h-full bg-neutral-200 text-neutral-800 md:w-1/2">
           <div className="container flex flex-col justify-end h-full p-4 pt-8 md:p-16">
             <h2 className="text-2xl font-semibold">Blog</h2>
             {posts.sort(
               (a, b) =>
                 new Date(b.frontmatter.publishedDate).getTime() - new Date(a.frontmatter.publishedDate).getTime(),
-            ).map(({ slug, frontmatter }) => (
+                ).map(({ slug, frontmatter }) => (
               <div
                 key={slug}
                 className='text-black'
