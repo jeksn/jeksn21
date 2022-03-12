@@ -31,14 +31,7 @@ export default function Home({ posts }) {
        <Head>
          <title>Johan Eriksson - jeksn.me</title>
          <link rel="icon" href="/favicon.ico" />
-         {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
-        process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
-          <Script
-            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-            strategy="lazyOnload"
-          />
-        )}
+         <Script async defer data-website-id="4523f431-eed9-4deb-a867-24ef52eb5d5d" src="https://umami-mu-nine.vercel.app/umami.js" />
        </Head>
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">
