@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   @apply bg-neutral-800;
+  @apply antialiased;
 }
 
 a {
@@ -31,4 +32,7 @@ h1 {
 ul {
   @apply list-disc;
   @apply list-inside;
+}
+.my-gradient {
+  background-image: linear-gradient(to top, #09203f 0%, #415869 100%);
 }

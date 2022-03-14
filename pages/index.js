@@ -25,16 +25,12 @@ export async function getStaticProps() {
 
 export default function Home({ posts }) {
   return (
-    <div className="flex flex-col items-center justify-center h-auto bg-neutral-800 md:h-screen text-neutral-800">
+    <div className="flex flex-col items-center justify-center h-auto my-gradient md:h-screen text-neutral-800">
        <main className="relative flex flex-col justify-center w-full md:flex-row">
-         <div className="relative top-0 flex flex-col w-full min-h-[80vh] text-gray-200 md:min-h-screen bg-neutral-800 gradient md:w-1/2 ">
+         <div className="relative top-0 flex flex-col w-full min-h-[80vh] text-gray-200 md:min-h-screen gradient md:w-1/2 ">
           <div className="container bottom-0 flex flex-col justify-end h-full px-4 pt-16 pb-4 md:px-16 md:fixed">
             <h1 className="text-4xl font-bold lg:text-7xl xl:text-9xl md:text-6xl">jeksn <br></br>/ Johan <br></br>Eriksson</h1>
             <div className="pl-3 my-6 border-l-2 border-white">
-              {/* <p className="text-sm leading-relaxed text-[#e5e5e5]">
-                Welcome to my corner of the internet. <br></br>I work as a developer at WTMG Create in Stockholm, Sweden. <br></br>
-                Here I'll put stuff that I find interesting and hopefully you will too.
-              </p> */}
             </div>
             <p className="mb-2 text-lg">You can find me here:</p>
             <a href="https://twitter.com/jeksn_" className="text-base w-fit hover:underline" target="_blank">Twitter</a>
@@ -50,24 +46,24 @@ export default function Home({ posts }) {
             <span className="pt-8 text-xs text-gray-400">2022. This site is still actively worked on and might look wonky at times.</span>
           </div>
          </div>
-          <div className="relative w-full h-full bg-neutral-800 text-neutral-200 md:w-1/2">
+          <div className="relative w-full h-full text-neutral-200 md:w-1/2">
           <div className="container flex flex-col justify-end h-full p-4 pt-8 md:p-16">
-            <h2 className="text-2xl font-semibold">Blog</h2>
+            <h2 className="mb-4 text-2xl md:text-4xl">Blog posts</h2>
             {posts.sort(
               (a, b) =>
                 new Date(b.frontmatter.publishedDate).getTime() - new Date(a.frontmatter.publishedDate).getTime(),
                 ).map(({ slug, frontmatter }) => (
-              <div
-                key={slug}
-                className='text-neutral-200'
-              >
                 <Link href={`/blog/${slug}`}>
                   <a>
-                    <p className='pt-4 mb-0 text-lg underline'>{frontmatter.title}</p>
-                  </a>
-                </Link>
-                <span className='text-sm text-neutral-200'>{frontmatter.publishedDate}</span>
+              <div
+                key={slug}
+                className='px-12 py-6 mt-8 border-l-4 transition-all ease-in-out hover:border-l-8 border-[#364d5f] rounded-sm text-neutral-900 bg-neutral-100'
+              >
+                <p className='mb-2 text-xl'>{frontmatter.title}</p>
+                <span className='text-sm no-underline text-neutral-600'>{frontmatter.publishedDate}</span>
               </div>
+              </a>
+            </Link>
             ))}
           </div>
           </div>
