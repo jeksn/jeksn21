@@ -15,11 +15,11 @@ function PostTemplate({ content, data }) {
          <link rel="icon" href="/favicon.ico" />
        </Head>
      <Link href="/">
-      <a className="absolute top-4 md:top-10 left-4 md:left-10 text-neutral-900">go back</a>
+      <a className="absolute top-4 md:top-10 left-4 md:left-10 text-neutral-100">go back</a>
      </Link>
-     <div className="container flex flex-col justify-center h-full max-w-screen-md px-4 mx-auto my-32 prose">
-       <h1 className="mb-0">{frontmatter.title}</h1>
-       <h3 className="mt-2 mb-16 text-base font-normal text-neutral-600">{frontmatter.publishedDate}</h3>
+     <div className="container flex flex-col justify-center h-full max-w-screen-md px-4 mx-auto my-32 prose text-neutral-100">
+       <h1 className="mb-0 text-neutral-100">{frontmatter.title}</h1>
+       <h3 className="mt-2 mb-16 text-base font-normal text-neutral-300">{frontmatter.publishedDate}</h3>
        <ReactMarkdown children={content} />
      </div>
      </>
