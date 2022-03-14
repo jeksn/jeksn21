@@ -3,7 +3,6 @@ import Head from "next/head";
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import Script from 'next/script'
 
 export async function getStaticProps() {
   const files = fs.readdirSync('content');
@@ -31,7 +30,6 @@ export default function Home({ posts }) {
        <Head>
          <title>Johan Eriksson - jeksn.me</title>
          <link rel="icon" href="/favicon.ico" />
-         <Script async defer data-website-id="4523f431-eed9-4deb-a867-24ef52eb5d5d" src="https://umami-mu-nine.vercel.app/umami.js" />
        </Head>
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">
