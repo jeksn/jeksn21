@@ -30,6 +30,7 @@ export default function Home({ posts }) {
        <Head>
          <title>Johan Eriksson - jeksn.me</title>
          <link rel="icon" href="/favicon.ico" />
+          <script async defer data-website-id="4523f431-eed9-4deb-a867-24ef52eb5d5d" src="https://umami-mu-nine.vercel.app/umami.js"></script>
        </Head>
 
        <main className="relative flex flex-col justify-center w-full md:flex-row">

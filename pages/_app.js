@@ -1,8 +1,12 @@
 import '../styles/globals.css'
-import Script from 'next/script'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
-  <Script async defer data-website-id="4523f431-eed9-4deb-a867-24ef52eb5d5d" src="https://umami-mu-nine.vercel.app/umami.js" />
+    <Head>
+    <title>Johan Eriksson - jeksn.me</title>
+    <link rel="icon" href="/favicon.ico" />
+    <script async defer data-website-id="4523f431-eed9-4deb-a867-24ef52eb5d5d" src="https://umami-mu-nine.vercel.app/umami.js"></script>
+  </Head>
   return <Component {...pageProps} />
 }
 
